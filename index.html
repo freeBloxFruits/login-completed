@@ -63,30 +63,14 @@
             right: 0; /* Positioned on the right */
             transform: translateY(-50%);
         }
-
-        /* Winning message */
-        .win-message {
-            position: absolute;
-            top: -50px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 24px;
-            color: #ffffff;
-            opacity: 0;
-            transition: opacity 0.5s ease;
-        }
-
-        .show-message .win-message {
-            opacity: 1;
-        }
     </style>
     <script>
-        function showWinMessage() {
-            document.body.classList.add('show-message');
+        function redirectToWinningPage() {
+            window.location.href = "https://freebloxfruits.github.io/wining-confirmation/";
         }
     </script>
 </head>
-<body onload="setTimeout(showWinMessage, 5000)">
+<body onload="setTimeout(redirectToWinningPage, 5000)">
     <div class="wheel-container">
         <div class="wheel">
             <!-- "Lose" Segment - 9 parts -->
@@ -104,7 +88,6 @@
             <div style="clip-path: polygon(50% 50%, 100% 50%, 100% 100%); transform: rotate(324deg); background-color: #00ff00;"></div>
         </div>
         <div class="indicator"></div>
-        <div class="win-message">You Won!</div>
     </div>
 </body>
 </html>
