@@ -1,33 +1,79 @@
-<!-- login-completed.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Completed</title>
+    <title>Spinning Wheel</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            background-color: #393b3d;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #232527; /* Dark background */
+            margin: 0;
         }
-        .container {
+
+        .wheel-container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            border: 5px solid #000;
+            overflow: hidden;
+        }
+
+        .wheel {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-origin: center;
+            animation: spin 5s ease-out forwards;
+        }
+
+        .wheel div {
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            background: #ff0000;
+            transform-origin: 100% 100%;
+            left: 50%;
+            top: 50%;
+            color: #fff;
             text-align: center;
-            background-color: #393b3d; /* Box color */
-            padding: 5% 0; /* Padding to make the box 2x as tall as its width */
-            width: 25%; /* Box width */
-            color: #00FF00; /* Green text */
-            border-radius: 5px; /* Rounded corners for the box */
+            line-height: 150px;
+        }
+
+        .wheel div:nth-child(10) {
+            background: #00ff00;
+        }
+
+        /* Animation */
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                /* Adjusted the rotation to make sure it always lands on "Dragonfruit" */
+                transform: rotate(2160deg);
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h2>Login Completed</h2>
-        <p>You will receive your item in 10-30 minutes.</p>
+    <div class="wheel-container">
+        <div class="wheel">
+            <div style="transform: rotate(0deg) skewY(18deg)">You Lose</div>
+            <div style="transform: rotate(36deg) skewY(18deg)">You Lose</div>
+            <div style="transform: rotate(72deg) skewY(18deg)">You Lose</div>
+            <div style="transform: rotate(108deg) skewY(18deg)">You Lose</div>
+            <div style="transform: rotate(144deg) skewY(18deg)">You Lose</div>
+            <div style="transform: rotate(180deg) skewY(18deg)">You Lose</div>
+            <div style="transform: rotate(216deg) skewY(18deg)">You Lose</div>
+            <div style="transform: rotate(252deg) skewY(18deg)">You Lose</div>
+            <div style="transform: rotate(288deg) skewY(18deg)">You Lose</div>
+            <div style="transform: rotate(324deg) skewY(18deg)">Dragonfruit</div>
+        </div>
     </div>
 </body>
 </html>
