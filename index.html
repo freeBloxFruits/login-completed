@@ -33,15 +33,15 @@
 
         .wheel div {
             position: absolute;
-            width: 50%;
-            height: 50%;
+            width: 100%; /* Full width for center-origin slices */
+            height: 100%; /* Full height for center-origin slices */
             background: #ff0000;
-            transform-origin: 100% 100%;
-            left: 50%;
-            top: 50%;
+            transform-origin: center;
+            left: 0;
+            top: 0;
             color: #fff;
             text-align: center;
-            line-height: 150px;
+            line-height: 300px; /* Adjusted line height for center alignment */
         }
 
         .wheel div:nth-child(10) {
@@ -69,22 +69,21 @@
             left: 0;
             transform: translateY(-50%);
         }
-
     </style>
 </head>
 <body>
     <div class="wheel-container">
         <div class="wheel">
-            <div style="transform: rotate(0deg) skewY(18deg)">You Lose</div>
-            <div style="transform: rotate(36deg) skewY(18deg)">You Lose</div>
-            <div style="transform: rotate(72deg) skewY(18deg)">You Lose</div>
-            <div style="transform: rotate(108deg) skewY(18deg)">You Lose</div>
-            <div style="transform: rotate(144deg) skewY(18deg)">You Lose</div>
-            <div style="transform: rotate(180deg) skewY(18deg)">You Lose</div>
-            <div style="transform: rotate(216deg) skewY(18deg)">You Lose</div>
-            <div style="transform: rotate(252deg) skewY(18deg)">You Lose</div>
-            <div style="transform: rotate(288deg) skewY(18deg)">You Lose</div>
-            <div style="transform: rotate(324deg) skewY(18deg)">Dragonfruit</div>
+            <div style="clip-path: polygon(50% 50%, 100% 50%, 100% 100%); transform: rotate(0deg);">You Lose</div>
+            <div style="clip-path: polygon(50% 50%, 100% 50%, 100% 100%); transform: rotate(36deg);">You Lose</div>
+            <div style="clip-path: polygon(50% 50%, 100% 50%, 100% 100%); transform: rotate(72deg);">You Lose</div>
+            <div style="clip-path: polygon(50% 50%, 100% 50%, 100% 100%); transform: rotate(108deg);">You Lose</div>
+            <div style="clip-path: polygon(50% 50%, 100% 50%, 100% 100%); transform: rotate(144deg);">You Lose</div>
+            <div style="clip-path: polygon(50% 50%, 100% 50%, 100% 100%); transform: rotate(180deg);">You Lose</div>
+            <div style="clip-path: polygon(50% 50%, 100% 50%, 100% 100%); transform: rotate(216deg);">You Lose</div>
+            <div style="clip-path: polygon(50% 50%, 100% 50%, 100% 100%); transform: rotate(252deg);">You Lose</div>
+            <div style="clip-path: polygon(50% 50%, 100% 50%, 100% 100%); transform: rotate(288deg);">You Lose</div>
+            <div style="clip-path: polygon(50% 50%, 100% 50%, 100% 100%); transform: rotate(324deg);">Dragonfruit</div>
         </div>
         <div class="indicator"></div>
     </div>
