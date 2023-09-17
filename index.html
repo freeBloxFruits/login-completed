@@ -33,7 +33,7 @@
 
         .wheel div {
             position: absolute;
-            width: 100%;
+            width: 100%; 
             height: 100%;
             transform-origin: center;
             left: 0;
@@ -46,8 +46,8 @@
                 transform: rotate(0deg);
             }
             100% {
-                /* Adjusted the rotation to make sure it always lands on "Win" */
-                transform: rotate(3240deg);
+                /* Adjusted the rotation to make sure the green stops at the arrow */
+                transform: rotate(3249deg); 
             }
         }
 
@@ -58,8 +58,8 @@
             height: 0;
             border-left: 15px solid transparent;
             border-right: 15px solid transparent;
-            border-bottom: 30px solid gray;
-            top: 0;
+            border-top: 30px solid gray; /* Flipped the arrow */
+            bottom: 0; /* Adjusted from top to bottom */
             left: 50%;
             transform: translateX(-50%);
         }
